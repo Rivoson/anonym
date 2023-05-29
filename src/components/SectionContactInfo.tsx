@@ -38,6 +38,9 @@ const StyledSection = styled.div`
 
 const StyledIconContainer = styled.div`
   margin-left: 20px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const StyledContainer = styled(Container)`

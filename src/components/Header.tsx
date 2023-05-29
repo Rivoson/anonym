@@ -45,7 +45,7 @@ const StyledContainer = styled(Container)`
 export const Header = () => {
     return <StyledSection>
         <StyledContainer>
-            <StyledLogo>Logo</StyledLogo>
+            <StyledLogo>Anonym</StyledLogo>
             <StyledNav>
                 <StyledUl>
                     <StyledLi>Prestations de Service</StyledLi>
