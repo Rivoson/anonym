@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 
 export const Container = styled.div`
-  width: 70%;
+  width: 80%;
   margin: auto;
   @media (max-width: 768px) {
     width: 100%;
