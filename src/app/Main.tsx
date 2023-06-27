@@ -4,7 +4,7 @@ import {Container} from "@/components/Container";
 import {Button} from "@/components/Button";
 
 const StyledMain = styled.div`
-  background-color: #FFF;
+  background-color: #F8F8F8;
   color: #000;
   padding-top: 50px;
   @media (max-width: 768px) {
@@ -133,7 +133,7 @@ const InProductionContainer = styled(Container)`
 `
 
 const InProductionLabel = styled.div`
-  background-color: #FFF;
+  background-color: #F8F8F8;
   width: 100%;
   text-align: center;
   font-size: 19px;
@@ -354,6 +354,50 @@ const Video3DHelpToContainer = styled.div`
   margin-top: 20px;
 `
 
+const Input = styled.input`
+  width: 100%;
+  height: 5vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 300;
+  :focus {
+    outline: none;
+    border: 1px solid black;
+  }
+`
+
+const InputLabel = styled.div`
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 5px;
+`
+
+const InputForm = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`
+
+const Textarea = styled.textarea`
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 300;
+  padding-top: 12px;
+  :focus {
+    outline: none;
+    border: 1px solid black;
+  }
+`
+
+const SendContactButton = styled(Button)`
+  width: 10vw;
+  height: 5vh;
+`
+
+const RequiredStar = styled.span`
+  color: red;
+`
+
 export const Main = () => {
     const perspectiveTypes = [
         {
@@ -468,5 +512,35 @@ export const Main = () => {
                 </VideoRightContent>
             </ContentWithVideo>
         </ContainerWithVideo>
+        <div>
+            <Container style={{paddingTop: 30, paddingBottom: 30}}>
+                <H1 style={{fontWeight: 200, marginBottom: 30}}>Contactez-nous</H1>
+                <div style={{display: "flex", width: "100%"}}>
+                    <InputForm>
+                        <InputLabel>Nom <RequiredStar>*</RequiredStar></InputLabel>
+                        <Input inputMode="text" placeholder="Pierre Delacroix"/>
+                    </InputForm>
+
+                    <InputForm style={{marginLeft: 15}}>
+                        <InputLabel>Téléphone <RequiredStar>*</RequiredStar></InputLabel>
+                        <Input inputMode="tel" placeholder="+33 05 23 45 23 98"/>
+                    </InputForm>
+                </div>
+
+                <div>
+                    <InputForm>
+                        <InputLabel>Email <RequiredStar>*</RequiredStar></InputLabel>
+                        <Input inputMode="email" placeholder="pierre@mail.com"/>
+                    </InputForm>
+
+                    <InputForm>
+                        <InputLabel>Message <RequiredStar>*</RequiredStar></InputLabel>
+                        <Textarea placeholder="Parlez nous de votre projet" />
+                    </InputForm>
+                </div>
+
+                <SendContactButton>ENVOYER</SendContactButton>
+            </Container>
+        </div>
     </StyledMain>
 }
