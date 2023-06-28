@@ -51,6 +51,9 @@ const StyledWeAreContainer = styled.div`
   width: 100%;
   min-height: 75vh;
   margin-top: 40px;
+  @media (max-width: 768px) {
+    max-height: 75vh;
+  }
 `
 
 const StyledWeAreTitle = styled.div`
@@ -60,6 +63,7 @@ const StyledWeAreTitle = styled.div`
   padding-top: 50vh;
   @media (max-width: 768px) {
     font-size: 38px;
+    position: relative;
   }
 `
 
@@ -80,6 +84,8 @@ const StyledWeDoContainer = styled(BlackContainer)`
   width: 65%;
   @media (max-width: 768px) {
     width: 100%;
+    position: relative;
+    top: 2vh;
     flex-direction: column;
     align-items: start;
   }
@@ -128,7 +134,7 @@ const InProductionContainer = styled(Container)`
   margin-top: 140px;
   @media (max-width: 768px) {
     flex-direction: column;
-    margin-top: 310px;
+    margin-top: 55vh;
   }
 `
 
@@ -190,7 +196,9 @@ const PerspectiveTypeCardTitle = styled.div`
   line-height: 30px;
   font-weight: 600;
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 200;
+    text-align: center;
   }
 `
 
@@ -198,6 +206,11 @@ const PerspectiveTypeCardDescription = styled.div`
   color: #FFFF;
   font-size: 14px;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+  }
 `
 
 const PerspectiveTypeCardContainer = styled.div`
@@ -253,7 +266,9 @@ const UseOurProjectTitle = styled.div`
   color: #FFF;
   margin-bottom: 20px;
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
   }
 `
 
@@ -287,6 +302,9 @@ const ProtfolioButtonLbl = styled.div`
 
 const ContainerWithVideo = styled(Container)`
   margin-top: 80vh;
+  @media (max-width: 768px) {
+    margin-top: 20vh;
+  }
 `
 
 const H1 = styled.h1`
@@ -303,10 +321,23 @@ const Regular = styled.span`
 
 const VideoContainer = styled.video`
   height: 50vh;
-  width: 100%;
-  flex: 0.7;
+  width: 70%;
   @media (max-width: 768px) {
     flex: 1;
+    width: 100%;
+  }
+`
+
+const VideoRightContent = styled.div`
+  width: 28%;
+  margin-left: 2vw;
+  margin-top: 1vh;
+  @media (max-width: 768px) {
+    flex: 1;
+    margin-top: 3vh;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
   }
 `
 
@@ -321,20 +352,18 @@ const ContentWithVideo = styled.div`
 const ClientNeedContainer = styled(BlackContainer)`
   color: white;
   font-size: 14px;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 40px;
+  padding-left: 40px;
   padding-top: 30px;
   padding-bottom: 30px;
   font-weight: 300;
   line-height: 1.7;
-`
-
-const VideoRightContent = styled.div`
-  flex: 0.3;
-  margin-right: 50px;
-  margin-left: 50px;
   @media (max-width: 768px) {
-    flex: 1;
+    font-weight: 200;
+    font-size: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
   }
 `
 
@@ -346,6 +375,9 @@ const MoreVideoButton = styled(Button)`
   width: 100%;
   height: 4vh;
   margin-top: 35px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 const Bold = styled.span`
@@ -372,6 +404,9 @@ const Input = styled.input`
     outline: none;
     border: 1px solid black;
   }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 const InputLabel = styled.div`
@@ -395,11 +430,18 @@ const Textarea = styled.textarea`
     outline: none;
     border: 1px solid black;
   }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 const SendContactButton = styled(Button)`
   width: 10vw;
   height: 5vh;
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+  }
 `
 
 const RequiredStar = styled.span`
