@@ -301,8 +301,7 @@ const Regular = styled.span`
   font-weight: 300;
 `
 
-const VideoContainer = styled.div`
-  background-color: black;
+const VideoContainer = styled.video`
   height: 50vh;
   width: 100%;
   flex: 0.7
@@ -497,7 +496,9 @@ export const Main = () => {
             <H1><Thin>Conceptions et</Thin> <Regular>animations 3D</Regular></H1>
             <StyledLine {...{thin: true, height: 40}} />
             <ContentWithVideo>
-                <VideoContainer />
+                <VideoContainer controls>
+                    <source src="https://www.immersive-home.fr/wp-content/uploads/2021/12/video_720p.mp4" type="video/mp4" />
+                </VideoContainer>
                 <VideoRightContent>
                     <ClientNeedContainer>
                         Apportez de la valeur ajoutée à vos clients potentiels grâce à des finitions hyperréalistes qui feront la différence dans la rapidité de vos ventes pour obtenir un financement rapide.
@@ -542,5 +543,10 @@ export const Main = () => {
                 <SendContactButton>ENVOYER</SendContactButton>
             </Container>
         </div>
+        <BlackContainer>
+            <Container>
+                <div style={{color: "white", textAlign: "center", fontWeight: 300, padding: 30}}>Tous droits réservés. anonym © 2023</div>
+            </Container>
+        </BlackContainer>
     </StyledMain>
 }
