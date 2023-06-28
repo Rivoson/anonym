@@ -304,12 +304,18 @@ const Regular = styled.span`
 const VideoContainer = styled.video`
   height: 50vh;
   width: 100%;
-  flex: 0.7
+  flex: 0.7;
+  @media (max-width: 768px) {
+    flex: 1;
+  }
 `
 
 const ContentWithVideo = styled.div`
   display: flex;
   margin-top: 30px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const ClientNeedContainer = styled(BlackContainer)`
@@ -327,6 +333,9 @@ const VideoRightContent = styled.div`
   flex: 0.3;
   margin-right: 50px;
   margin-left: 50px;
+  @media (max-width: 768px) {
+    flex: 1;
+  }
 `
 
 const MoreVideoButton = styled(Button)`
